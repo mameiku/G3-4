@@ -9,7 +9,7 @@ rectangle 図書館システム {
   usecase "図書を借りる" as Checkout
   usecase "図書を返却する" as Return
   usecase "図書を予約する" as Reserve
-  usecase "貸出履歴を閲覧する" as ViewHistory
+  usecase "貸出履歴と図書の予約を閲覧する" as ViewHistory
 }
 
 Student --> Checkout
