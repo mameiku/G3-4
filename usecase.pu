@@ -1,24 +1,24 @@
-@startuml 大原情報科学大学・図書館システムユースケース図
+@startuml 大原情報科学大学・図書館システム
 left to right direction
-actor 利用者 as User
+
+actor 学生 as Student
+actor 教職員 as Teacher
 actor 事務職員 as Staff
- 
-rectangle 大原情報科学大学・図書館システム {
-  usecase "貸し出し予約" as Reserve
-  usecase "貸し出し" as Checkout
-  usecase "返却" as Return
-  usecase "貸出履歴の閲覧" as ViewHistory
-  usecase "貸出履歴の記録" as RecordHistory
-  usecase "予約者への連絡" as NotifyReservation
+
+rectangle 図書館システム {
+  usecase "図書を借りる" as Checkout
+  usecase "図書を返却する" as Return
+  usecase "図書を予約する" as Reserve
+  usecase "貸出履歴を閲覧する" as ViewHistory
 }
- 
-User --|> Staff
-Staff --> Checkout
-Staff --> Return
-Staff --> Reserve
+
+Student --> Checkout
+Student --> Return
+Student --> Reserve
+
+Teacher --> Checkout
+Teacher --> Return
+Teacher --> Reserve
+
 Staff --> ViewHistory
- 
-Checkout ..> RecordHistory : <<include>>
-Return ..> RecordHistory : <<include>>
-Return ..> NotifyReservation : <<include>>
 @enduml
