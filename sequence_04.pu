@@ -1,4 +1,4 @@
-@startuml
+@startuml .
 actor 事務職員 as J
 participant 履歴画面UI as UI
 participant 閲覧コントローラ as C

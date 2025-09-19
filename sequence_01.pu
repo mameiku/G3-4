@@ -1,4 +1,4 @@
-@startuml
+@startuml .
 actor 利用者 as U
 participant 事務職員 as J
 participant 貸出UI as UI
